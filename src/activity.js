@@ -17,7 +17,7 @@ export function getRandomActivity() {
 
 /**
  * Получает случайную активность из API и обновляет элемент с идентификатором 'activity-1'.
- * После обновления активности запускает повторный вызов через 6 секунд.
+ * После обновления активности запускает повторный вызов через минуту.
  */
 export async function getRandomActivityAwait() {
     try {
@@ -25,7 +25,6 @@ export async function getRandomActivityAwait() {
         const data = await response.json();
         const activityElement = document.getElementById('activity-1');
         activityElement.textContent = data.activity;
-        setTimeout(getRandomActivityAwait, 6000);
     } catch (error) {
         console.error('Ошибка:', error);
         const activityElement = document.getElementById('activity-1');
@@ -52,8 +51,8 @@ export async function getRandomActivityReturn() {
 /**
  * Обновляет элемент с идентификатором 'activity-1' с помощью случайной активности.
  */
-export async function updateActivity() {
-    const activityElement = document.getElementById('activity-1');
+export async  function updateActivity() {
     const activity = await getRandomActivityReturn();
-    activityElement.textContent = activity;
+    const displayText = document.getElementById('displayText')
+    displayText.textContent = activity;
 }

@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    
+}
+
+.container {
+    background-color: #fff; /* Цвет фона контейнера */
+    border-radius: 10px; /* Круглые углы */
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#activity, #activity-1 {
+    font-style: italic;
+    color: #007bff; /* Синий цвет ссылок */
+    border: 1px solid #ccc; /* Серая рамка */
+    border-radius: 10px; /* Круглые углы */
+    padding: 10px;
+    display: inline-block; /* Чтобы рамка окружала текст */
+}
